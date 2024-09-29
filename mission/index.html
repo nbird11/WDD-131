@@ -8,9 +8,17 @@
   <meta name="description" content="This is a recreation the BYU-I University mission statement in HTML and CSS.">
   <meta name="author" content="Nathan Bird (bir19004@byui.edu)">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./mission.js"></script>
 </head>
 
-<body>
+<body class="">
+  <div class="theme-switch">
+    <label for="theme">Theme Switch</label>
+    <select name="theme" id="theme-select">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
   <div class="box">
     <header>
       <h1>Mission Statement</h1>
@@ -43,7 +51,7 @@
       </ol>
     </main>
     <footer>
-      <img src="./byui-logo-blue.webp" alt="BYU-Idaho logo">
+      <img id="logo" src="./byui-logo-blue.webp" alt="BYU-Idaho logo">
     </footer>
 
   </div>

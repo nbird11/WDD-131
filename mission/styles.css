@@ -4,6 +4,11 @@ body {
   line-height: 1.5;
 }
 
+.theme-switch {
+  text-align: right;
+  margin: 20px 20px -40px 20px;
+}
+
 .box {
   max-width: 600px;
   margin: 50px auto;
@@ -51,4 +56,13 @@ footer {
 img {
   width: 150px;
   margin: 50px auto;
+}
+
+body.dark {
+  background-color: #333333;
+  color: white;
+
+  h2 {
+    color: #4F9ACF;
+  }
 }
