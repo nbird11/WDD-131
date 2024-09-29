@@ -28,9 +28,12 @@ body {
 }
 
 footer {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
   text-align: center;
-  margin-top: 20px;
-  color: #666;
+  transform: translateX(-50%);
   width: 100%;
 }
 
