@@ -12,6 +12,7 @@ main {
   margin: auto;
   transform: translateY(50%);
   display: flex;
+  justify-content: space-around;
 }
 
 form {
