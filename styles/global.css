@@ -15,7 +15,6 @@ html, body {
 }
 
 .container {
-  height: max-content;
   padding: 20px;
   background: #fafafa;
   text-align: left;
