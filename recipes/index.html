@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Recipe Book</title>
+  <meta name="description" content="A collection of delicious recipes with ratings and easy-to-follow instructions.">
+  <meta name="author" content="Nathan Bird (bir19004@byui.edu)">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Recipe Book">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="A collection of delicious recipes with ratings and easy-to-follow instructions.">
+  <meta property="og:image" content="https://wdd131.nbird.dev/recipes/images/recipe-book.png">
+  <meta property="og:url" content="https://wdd131.nbird.dev/recipes/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recipe Book">
+  <meta name="twitter:description"
+    content="A collection of delicious recipes with ratings and easy-to-follow instructions.">
+  <meta name="twitter:image" content="https://wdd131.nbird.dev/recipes/images/recipe-book.png">
+  <meta name="twitter:url" content="https://wdd131.nbird.dev/recipes/">
+
+  <link rel="stylesheet" href="recipes.css">
+  <script src="main.js" type="module" defer></script>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <header>
+      <div class="title-section">
+        <img src="images/recipe-book.png" alt="logo">
+        <h1>RecipeBook</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Find a recipe...">
+        <button><img src="images/search.svg" alt="search icon"></button>
+      </div>
+    </header>
+    <main>
+      <template id="recipe-template">
+        <article class="recipe-card">
+          <img src="" alt="">
+          <div class="recipe-card-content">
+            <span class="tags">
+              <span class="tag">tag1</span>
+              <span class="tag">tag2</span>
+              <span class="tag">tag3</span>
+            </span>
+            <h2></h2>
+            <div class="rating">
+              <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+              </span>
+            </div>
+            <p class="description"></p>
+          </div>
+        </article>
+      </template>
+    </main>
+    <footer>
+      <div class="social">
+        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+      </div>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+        Recipe icons created by Freepik - Flaticon
+      </a>
+    </footer>
+  </div>
+</body>
+
+</html>
