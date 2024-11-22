@@ -28,44 +28,48 @@ function setRating(ratingDiv, rating) {
   }
 }
 
-function displayRecipes() {
+function displayRecipe() {
+  /** @type {HTMLElement} */
   const main = document.querySelector('main');
+
+  /** @type {HTMLTemplateElement} */
   const template = document.getElementById('recipe-template');
   
-  recipes.forEach(recipe => {
-    const clone = template.content.cloneNode(true);
-    
-    // Set the image
-    const img = clone.querySelector('img');
-    img.src = recipe.image;
-    img.alt = recipe.name;
-    
-    // Set the tags
-    const tagsContainer = clone.querySelector('.tags');
-    tagsContainer.innerHTML = '';
-    if (recipe.tags && recipe.tags.length > 0) {
-      recipe.tags.forEach(tag => {
-        const tagSpan = document.createElement('span');
-        tagSpan.className = 'tag';
-        tagSpan.textContent = tag;
-        tagsContainer.appendChild(tagSpan);
-      });
-    }
-    
-    // Set the title
-    clone.querySelector('h2').textContent = recipe.name;
-    
-    // Set the description
-    clone.querySelector('.description').textContent = recipe.description;
-    
-    // Set the rating
-    if (recipe.rating) {      
-      setRating(clone.querySelector('.rating'), recipe.rating);
-    }
-    
-    main.appendChild(clone);
-  });
+  // Get the last recipe from the array
+  const recipe = recipes[recipes.length - 1];
+  
+  const clone = template.content.cloneNode(true);
+  
+  // Set the image
+  const img = clone.querySelector('img');
+  img.src = recipe.image;
+  img.alt = recipe.name;
+  
+  // Set the tags
+  const tagsContainer = clone.querySelector('.tags');
+  tagsContainer.innerHTML = '';
+  if (recipe.tags && recipe.tags.length > 0) {
+    recipe.tags.forEach(tag => {
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'tag';
+      tagSpan.textContent = tag;
+      tagsContainer.appendChild(tagSpan);
+    });
+  }
+  
+  // Set the title
+  clone.querySelector('h2').textContent = recipe.name;
+  
+  // Set the description
+  clone.querySelector('.description').textContent = recipe.description;
+  
+  // Set the rating
+  if (recipe.rating) {      
+    setRating(clone.querySelector('.rating'), recipe.rating);
+  }
+  
+  main.appendChild(clone);
 }
 
-// Display recipes when the page loads
-displayRecipes();
+// Display single recipe when the page loads
+displayRecipe();
