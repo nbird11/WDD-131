@@ -1,75 +1,60 @@
 import recipes from './recipes.mjs';
 
-function setRating(ratingDiv, rating) {
-  const fullStars = Math.floor(rating);
-  const emptyStars = 5 - fullStars;
-  
-  ratingDiv.setAttribute('aria-label', `Rating: ${rating} out of 5 stars`);
-  
-  // Clear existing content
-  ratingDiv.innerHTML = '';
-  
-  // Add filled stars
-  for (let i = 0; i < fullStars; i++) {
-    const star = document.createElement('span');
-    star.className = 'icon-star';
-    star.setAttribute('aria-hidden', 'true');
-    star.textContent = '⭐';
-    ratingDiv.appendChild(star);
-  }
-  
-  // Add empty stars
-  for (let i = 0; i < emptyStars; i++) {
-    const star = document.createElement('span');
-    star.className = 'icon-star-empty';
-    star.setAttribute('aria-hidden', 'true');
-    star.textContent = '☆';
-    ratingDiv.appendChild(star);
-  }
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
 }
 
-function displayRecipe() {
-  /** @type {HTMLElement} */
+function getRandomListEntry(list) {
+  const randomIndex = getRandomNumber(list.length);
+  return list[randomIndex];
+}
+
+function tagsTemplate(tags) {
+  if (!tags || tags.length === 0) return '';
+
+  const tagElements = tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+  return `<span class="tags">${tagElements}</span>`;
+}
+
+function ratingTemplate(rating) {
+  let html = `
+    <div class="rating">
+      <span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">
+  `;
+
+  for (let i = 1; i <= 5; i++) {
+    html += `<span aria-hidden="true" ${i <= rating ? 'class="icon-star">⭐'
+      : 'class="icon-star-empty">☆'}
+    </span>`;
+  }
+
+  return html + '</span></div>';
+}
+
+function recipeTemplate(recipe) {
+  return `
+    <article class="recipe-card">
+      <img src="${recipe.image}" alt="${recipe.name}">
+      <div class="recipe-card-content">
+        ${tagsTemplate(recipe.tags)}
+        <h2>${recipe.name}</h2>
+        ${ratingTemplate(recipe.rating)}
+        <p class="description">${recipe.description}</p>
+      </div>
+    </article>
+  `;
+}
+
+function renderRecipes(recipes) {
   const main = document.querySelector('main');
-
-  /** @type {HTMLTemplateElement} */
-  const template = document.getElementById('recipe-template');
-  
-  // Get the last recipe from the array
-  const recipe = recipes[recipes.length - 1];
-  
-  const clone = template.content.cloneNode(true);
-  
-  // Set the image
-  const img = clone.querySelector('img');
-  img.src = recipe.image;
-  img.alt = recipe.name;
-  
-  // Set the tags
-  const tagsContainer = clone.querySelector('.tags');
-  tagsContainer.innerHTML = '';
-  if (recipe.tags && recipe.tags.length > 0) {
-    recipe.tags.forEach(tag => {
-      const tagSpan = document.createElement('span');
-      tagSpan.className = 'tag';
-      tagSpan.textContent = tag;
-      tagsContainer.appendChild(tagSpan);
-    });
-  }
-  
-  // Set the title
-  clone.querySelector('h2').textContent = recipe.name;
-  
-  // Set the description
-  clone.querySelector('.description').textContent = recipe.description;
-  
-  // Set the rating
-  if (recipe.rating) {      
-    setRating(clone.querySelector('.rating'), recipe.rating);
-  }
-  
-  main.appendChild(clone);
+  const recipeElements = recipes.map(recipe => recipeTemplate(recipe));
+  main.innerHTML = recipeElements.join('');
 }
 
-// Display single recipe when the page loads
-displayRecipe();
+function init() {
+  const randomRecipe = getRandomListEntry(recipes);
+  renderRecipes([randomRecipe]);
+}
+
+init();
