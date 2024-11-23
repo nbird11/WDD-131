@@ -1,3 +1,24 @@
+/**
+ * @typedef {Object} Recipe
+ * @property {string} author
+ * @property {string} url
+ * @property {string} isBasedOn
+ * @property {string} cookTime
+ * @property {string} datePublished
+ * @property {string[]} tags
+ * @property {string} description
+ * @property {string} image
+ * @property {string[]} recipeIngredient
+ * @property {string} name
+ * @property {string} prepTime
+ * @property {string[]} recipeInstructions
+ * @property {string} recipeYield
+ * @property {number} rating
+ */
+
+/**
+ * @type {Recipe[]}
+ */
 const recipes = [
 	{
 		author: 'Provo High Culinary Students',
@@ -280,4 +301,4 @@ const recipes = [
 	}
 ]
 
-export default recipes
+export default recipes;
