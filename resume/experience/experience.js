@@ -15,7 +15,7 @@ function experienceTemplate(experience) {
       <div class="experience-content">
         <div class="experience-header">
           <h2 class="experience-title">${experience.title}</h2>
-          <h3 class="experience-company">${experience.company} · ${experience.employmentType}</h3>
+          <p class="experience-company">${experience.company} · ${experience.employmentType}</p>
           <p class="experience-time">${experience.start} - ${experience.end}</p>
           <p class="experience-location">${experience.location} · ${experience.locationType}</p>
         </div>

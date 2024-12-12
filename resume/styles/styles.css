@@ -9,7 +9,8 @@
   --accent1-color: #70566D;
   --accent2-color: #C3DFE0;
   --background-color: #112A2B;
-
+  --background-color-light: #F8F8F8;
+  
   /* High Contrast Colors */
   --secondary-color-high-contrast-white: #87734B;
   
@@ -18,6 +19,7 @@
   --headline-color-on-color: white;
   --paragraph-color-on-white: var(--background-color);
   --paragraph-color-on-color: white;
+  --paragraph-color-dim-on-white: #00000090;
   --paragraph-background-color: var(--primary-color);
   
   /* Colors for navigation */

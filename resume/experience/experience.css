@@ -1,6 +1,11 @@
+main h1 {
+  margin: 2rem 0 0 0;
+  text-align: center;
+}
+
 .experience-list {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin:2rem auto;
   padding: 0 2rem;
 }
 
@@ -9,9 +14,10 @@
   gap: 2rem;
   padding: 2rem;
   margin-bottom: 2rem;
-  background-color: white;
+  background-color: var(--background-color-light);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .experience-item:nth-child(even) {
@@ -32,26 +38,30 @@
   margin-bottom: 1rem;
 }
 
-.experience-title {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
+.experience-header * {
   margin: 0;
 }
 
+.experience-header :not(.experience-title) {
+  color: var(--paragraph-color-dim-on-white);
+  font-family: var(--heading-font);
+}
+
+.experience-title {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+
 .experience-company {
-  color: var(--primary-color);
-  margin: 0.5rem 0;
+  color: var(--paragraph-color-on-white);
 }
 
 .experience-time {
-  color: var(--accent1-color);
-  font-style: italic;
+  color: var(--paragraph-color-on-white);
 }
 
 .experience-location {
-  color: var(--accent1-color);
-  font-style: italic;
-  margin-bottom: 1rem;
+  color: var(--paragraph-color-on-white);
 }
 
 .experience-description {
@@ -61,7 +71,6 @@
 }
 
 .experience-description li {
-  margin-bottom: 0.5rem;
   position: relative;
   padding-left: 1.5rem;
 }
