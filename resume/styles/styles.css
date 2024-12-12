@@ -1,5 +1,6 @@
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather');
+@import url('footer.css');
 
 :root {
   /* Colors */
@@ -153,28 +154,3 @@ nav a:hover {
 .buttons a:hover {
   background-color: var(--secondary-color);
 }
-
-footer {
-  background-color: var(--background-color);
-  color: white;
-  padding: 1rem 1rem 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer a {
-  color: var(--accent2-color);
-  text-decoration: none;
-}
-
-.social-icons {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: invert(1);
-} 

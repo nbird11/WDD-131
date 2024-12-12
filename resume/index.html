@@ -15,7 +15,7 @@
     <img src="assets/simple-NB-logo.png" alt="NB Logo" class="logo">
     <nav>
       <a href="./">Home</a>
-      <a href="#">Experience</a>
+      <a href="experience/">Experience</a>
       <a href="#">Education</a>
       <a href="#">Project Showcase</a>
     </nav>
@@ -24,34 +24,27 @@
   <main>
     <section class="profile-section">
       <img src="assets/profile.jpg" alt="Nathan Bird" class="profile-image">
-      <div id="profile-info" class="profile-info"></div>
+      <article id="profile-info">
+        <!-- Profile info will be loaded here -->
+      </article>
     </section>
 
     <section class="about">
       <h2>About Me</h2>
-      <p id="about-text"></p>
+      <article id="about-text">
+        <!-- About text will be loaded here -->
+      </article>
     </section>
 
     <div class="buttons">
-      <a href="#">View Experience</a>
+      <a href="experience/">View Experience</a>
       <a href="#">View Education</a>
       <a href="#">Project Showcase</a>
     </div>
   </main>
 
   <footer>
-    <div>
-      <a href="#">About</a> | <a href="#">Contact</a>
-    </div>
-    <p>&copy; 2024 Nathan Bird</p>
-    <div class="social-icons">
-      <a href="https://github.com/nbird11" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/nathanabird/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn">
-      </a>
-    </div>
+    <script src="scripts/load-footer.js"></script>
   </footer>
 </body>
 
