@@ -60,7 +60,7 @@ const profile = {
   websites: [
     { name: "GitHub", url: "https://github.com/nbird11" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/nathanabird/" },
-    { name: "Personal Webserver", url: "https://nbird.dev/" }
+    { name: "Personal Webserver", url: "https://nbird.dev/" },
   ],
   about: "I'm currently a full-time student at BYU-Idaho studying Software Engineering with a focus on Software Design, optimizing algorithms, and reducing complexity. Over the summer, I interned as a Backend Web Developer at FamilySearch, where I built and maintained backend REST APIs, handled data collection, and monitored AWS builds/deploys. Notably, I contributed to a Paris 2024 Olympics project under a tight deadline.\nMy passion for technology extends beyond my professional life. I enjoy working on personal programming projects, which allows me to explore new technologies and enhance my skills. I am also an active member of the Association for Computing Machinery (ACM) at BYU-Idaho, participating in discussions on various Computer Science topics. Outside of tech, I love playing board games with friends, practicing the piano, and singing.\nDuring the height of the covid pandemic, I served a proselyting mission for the Church of Jesus Christ of Latter-day Saints where I taught, performed service, and provided spiritual aid in Colorado and Brazil, in English and Portuguese respectively.\nLooking forward to contributing to innovative projects and making a meaningful impact in the tech community.",
   education: [
@@ -81,6 +81,7 @@ const profile = {
       degree: "High School Diploma",
       start: "2015",
       end: "2019",
+      gpa: null,
       activities: [
         "Computer Science Club",
         "Marching Band",
