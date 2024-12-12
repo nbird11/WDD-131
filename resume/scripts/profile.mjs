@@ -56,7 +56,7 @@ const profile = {
     email: "nathanbirdka+resume@gmail.com",
     phone: "(385) 392-5995"
   },
-  bio: "Former Backend Software Development Intern at FamilySearch <br> Software Engineering Student at Brigham Young University-Idaho",
+  bio: "Former Backend Software Development Intern at FamilySearch\nSoftware Engineering Student at Brigham Young University-Idaho",
   websites: [
     { name: "GitHub", url: "https://github.com/nbird11" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/nathanabird/" },
