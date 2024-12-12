@@ -8,6 +8,9 @@
   --accent1-color: #70566D;
   --accent2-color: #C3DFE0;
   --background-color: #112A2B;
+
+  /* High Contrast Colors */
+  --secondary-color-high-contrast-white: #87734B;
   
   /* Colors for text */
   --headline-color-on-white: var(--background-color);
@@ -104,10 +107,10 @@ nav a:hover {
 }
 
 .websites a {
-  color: var(--secondary-color);
+  color: var(--secondary-color-high-contrast-white);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color-high-contrast-white);
   border-radius: 4px;
   transition: all 0.3s;
 }
