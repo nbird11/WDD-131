@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan Bird - Dynamic Resume</title>
+  <link rel="icon" type="image/png" href="assets/simple-NB-logo.png" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <script type="module" src="scripts/profile.mjs" defer></script>
+  <script type="module" src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="assets/simple-NB-logo.png" alt="NB Logo" class="logo">
+    <nav>
+      <a href="./">Home</a>
+      <a href="#">Experience</a>
+      <a href="#">Education</a>
+      <a href="#">Project Showcase</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <img src="assets/profile.jpg" alt="Nathan Bird" class="profile-image">
+      <div class="profile-info">
+        <h1 id="name"></h1>
+        <div class="contact-info">
+          <p id="location">📍 </p>
+          <p id="email">📧 </p>
+          <p id="phone">📱 </p>
+        </div>
+        <p id="bio" class="bio"></p>
+        <div id="websites" class="websites"></div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p id="about-text"></p>
+    </section>
+
+    <div class="buttons">
+      <a href="#">View Experience</a>
+      <a href="#">View Education</a>
+      <a href="#">Project Showcase</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <a href="#">About</a> | <a href="#">Contact</a>
+    </div>
+    <p>&copy; 2024 Nathan Bird</p>
+    <div class="social-icons">
+      <a href="https://github.com/nbird11" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/nathanabird/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html> 
