@@ -10,16 +10,16 @@ function experienceTemplate(experience) {
   const bullets = experience.bullets.map(bullet => `<li>${bullet}</li>`).join('');
   
   return `
-    <div class="experience-item">
-      <img class="company-logo" src="${logoSrc}" alt="${experience.company} logo">
-      <div class="experience-content">
-        <div class="experience-header">
-          <h2 class="experience-title">${experience.title}</h2>
-          <p class="experience-company">${experience.company} · ${experience.employmentType}</p>
-          <p class="experience-time">${experience.start} - ${experience.end}</p>
-          <p class="experience-location">${experience.location} · ${experience.locationType}</p>
+    <div class="card-item">
+      <img class="card-logo company-logo" src="${logoSrc}" alt="${experience.company} logo">
+      <div class="card-content">
+        <div class="card-header">
+          <h2 class="card-title">${experience.title}</h2>
+          <p>${experience.company} · ${experience.employmentType}</p>
+          <p>${experience.start} - ${experience.end}</p>
+          <p>${experience.location} · ${experience.locationType}</p>
         </div>
-        <ul class="experience-description">
+        <ul class="card-list-items">
           ${bullets}
         </ul>
       </div>

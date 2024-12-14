@@ -4,7 +4,7 @@ function headerTemplate() {
     <nav>
       <a href="/resume/">Home</a>
       <a href="/resume/experience/">Experience</a>
-      <a href="#">Education</a>
+      <a href="/resume/education/">Education</a>
       <a href="#">Project Showcase</a>
     </nav>
   `;
