@@ -55,6 +55,8 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .profile-image {
@@ -101,6 +103,8 @@ h6 {
   padding: 2rem;
   background-color: var(--accent2-color);
   border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .buttons {
@@ -109,6 +113,8 @@ h6 {
   gap: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .buttons a {
@@ -123,4 +129,48 @@ h6 {
 
 .buttons a:hover {
   background-color: var(--secondary-color);
+}
+
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .websites {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .about {
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+  }
+
+  .contact-info,
+  .bio {
+    padding: 0 1rem;
+  }
 }

@@ -21,4 +21,18 @@ footer a {
   width: 24px;
   height: 24px;
   filter: invert(1);
+}
+
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.8rem;
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
 } 

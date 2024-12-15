@@ -28,4 +28,31 @@ nav a {
 nav a:hover {
   background-color: var(--accent2-color);
   color: var(--background-color);
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
 } 
