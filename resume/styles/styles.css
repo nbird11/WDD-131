@@ -1,5 +1,6 @@
 @import url('header.css');
 @import url('footer.css');
+@import url('modal.css');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather');
 
 :root {
@@ -98,13 +99,12 @@ h6 {
 }
 
 .about {
-  max-width: 1200px;
+  width: min(1200px, calc(100vw - 5rem));
   margin: 2rem auto;
   padding: 2rem;
   background-color: var(--accent2-color);
   border-radius: 8px;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .buttons {
@@ -164,9 +164,9 @@ h6 {
   }
 
   .about {
+    width: auto;
     margin: 1rem;
     padding: 1rem;
-    width: auto;
   }
 
   .contact-info,
