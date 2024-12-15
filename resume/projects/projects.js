@@ -1,8 +1,8 @@
-import profile from '../scripts/profile.mjs';
+import projects from './projects.mjs';
 
 /**
  * Generates HTML template for a single project card
- * @param {import('../scripts/profile.mjs').Project} project The project object containing all project details
+ * @param {import('./projects.mjs').Project} project The project object containing all project details
  * @returns {string} HTML string representing the project card
  */
 function projectTemplate(project) {
@@ -73,7 +73,7 @@ function filterProjects(filter) {
  * Renders all projects and initializes the filtering functionality
  */
 function loadProjects() {
-  const projectsHTML = profile.projects.map(project => projectTemplate(project)).join('');
+  const projectsHTML = projects.map(project => projectTemplate(project)).join('');
   document.getElementById('project-grid').innerHTML = projectsHTML;
   setupFilters();
 }
