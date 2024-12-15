@@ -14,17 +14,22 @@ function projectTemplate(project) {
     <div class="project-card" data-categories="${project.categories.join(' ')}">
       <div class="project-image">
         ${project.featured ? '<span class="featured-badge">Featured</span>' : ''}
-        <img src="${project.image || '../assets/project-placeholder.png'}" alt="${project.title} screenshot">
+        <img src="${project.image || './assets/project-default.png'}" 
+             alt="${project.title} screenshot"
+             onerror="this.src='./assets/project-default.png'">
       </div>
       <div class="project-content">
-        <h2>${project.title}</h2>
-        <p>${project.description}</p>
+        <div class="project-header">
+          <h2>${project.title}</h2>
+          <span class="project-date">${project.date}</span>
+        </div>
         <div class="tech-stack">
           ${techStack}
         </div>
+        <p>${project.description}</p>
         <div class="project-links">
-          ${project.demo ? `<a href="${project.demo}" class="demo-link">Live Demo</a>` : ''}
-          ${project.github ? `<a href="${project.github}" class="github-link">View Code</a>` : ''}
+          ${project.demo ? `<a href="${project.demo}" target="_blank" class="demo-link">Demo</a>` : ''}
+          ${project.github ? `<a href="${project.github}" target="_blank" class="github-link">Learn More</a>` : ''}
         </div>
       </div>
     </div>`;

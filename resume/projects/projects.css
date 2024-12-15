@@ -129,4 +129,22 @@ main h1 {
 .filter-btn.active {
   background: var(--primary-color);
   color: white;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.project-header h2 {
+  margin: 0;
+  color: var(--headline-color-on-white);
+}
+
+.project-date {
+  font-style: italic;
+  color: var(--paragraph-color-dim-on-white);
+  font-size: 0.9rem;
 } 
