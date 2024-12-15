@@ -1,5 +1,10 @@
 @import url('../styles/card.css');
 
+main h1 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -32,6 +37,20 @@
   object-fit: cover;
 }
 
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h2 {
+  margin: 0 0 1rem 0;
+  color: var(--headline-color-on-white);
+}
+
+.project-content p {
+  margin: 0 0 1rem 0;
+  color: var(--paragraph-color-on-white);
+}
+
 .featured-badge {
   position: absolute;
   top: 1rem;
@@ -42,6 +61,10 @@
   border-radius: 4px;
 }
 
+.tech-stack {
+  margin-bottom: 1rem;
+}
+
 .tech-badge {
   background: var(--accent2-color);
   padding: 0.25rem 0.75rem;
@@ -49,6 +72,38 @@
   font-size: 0.8rem;
   margin: 0.25rem;
   display: inline-block;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--heading-font);
+  transition: background-color 0.2s;
+}
+
+.demo-link {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.github-link {
+  background-color: var(--accent2-color);
+  color: var(--background-color);
+}
+
+.demo-link:hover {
+  background-color: var(--secondary-color);
+}
+
+.github-link:hover {
+  background-color: var(--accent1-color);
+  color: white;
 }
 
 .filter-controls {
@@ -64,6 +119,11 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s;
+  font-family: var(--heading-font);
+}
+
+.filter-btn:hover {
+  background: var(--accent2-color);
 }
 
 .filter-btn.active {

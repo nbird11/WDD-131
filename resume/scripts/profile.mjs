@@ -187,12 +187,12 @@ const profile = {
       image: "../assets/project-screenshots/dynamic-resume.png",
       github: "https://github.com/nbird11/WDD-131/tree/main/resume",
       demo: "https://wdd131.nbird.dev/resume",
-      featured: true
+      featured: false
     },
     {
       title: "Orbital Simulator",
       description: "A desktop application simulating the motion of multiple satellites in orbit around the Earth.",
-      technologies: ["C++", "desktop"],
+      technologies: ["C++", "unit testing"],
       categories: ["desktop"],
       image: "../assets/project-screenshots/orbital-simulator.png",
       github: "https://github.com/nbird11/Lab12-Orbit-Parts-And-Fragments",
@@ -207,7 +207,7 @@ const profile = {
       image: "../assets/project-screenshots/cloud-database.png",
       github: "https://github.com/nbird11/TaskTracker",
       demo: null,
-      featured: true
+      featured: false
     }
   ]
 };
