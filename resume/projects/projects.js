@@ -1,8 +1,9 @@
 import profile from '../scripts/profile.mjs';
 
 /**
- * @param {import('../scripts/profile.mjs').Project} project 
- * @returns 
+ * Generates HTML template for a single project card
+ * @param {import('../scripts/profile.mjs').Project} project The project object containing all project details
+ * @returns {string} HTML string representing the project card
  */
 function projectTemplate(project) {
   const techStack = project.technologies.map(tech => 
@@ -29,6 +30,10 @@ function projectTemplate(project) {
     </div>`;
 }
 
+/**
+ * Sets up event listeners for project filter buttons
+ * Handles the UI state of active filter and triggers project filtering
+ */
 function setupFilters() {
   /** @type {NodeListOf<HTMLButtonElement>} */
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -46,7 +51,8 @@ function setupFilters() {
 }
 
 /**
- * @param {string} filter
+ * Filters project cards based on selected category
+ * @param {string} filter - The category to filter by ('all' or specific category)
  */
 function filterProjects(filter) {
   /** @type {NodeListOf<HTMLDivElement>} */
@@ -62,6 +68,10 @@ function filterProjects(filter) {
   });
 }
 
+/**
+ * Initializes the projects page by loading project data and setting up filters.  
+ * Renders all projects and initializes the filtering functionality
+ */
 function loadProjects() {
   const projectsHTML = profile.projects.map(project => projectTemplate(project)).join('');
   document.getElementById('project-grid').innerHTML = projectsHTML;

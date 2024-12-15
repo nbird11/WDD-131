@@ -1,11 +1,12 @@
 import profile from './profile.mjs';
 
 /**
- * @param {string} name 
- * @param {import('./profile.mjs').Contact} contact 
- * @param {string} bio 
- * @param {Array<import('./profile.mjs').Website>} websites 
- * @returns {string} The profile info template
+ * Generates the HTML template for the profile information section
+ * @param {string} name The user's full name
+ * @param {import('./profile.mjs').Contact} contact Contact information object
+ * @param {string} bio Brief biography text
+ * @param {Array<import('./profile.mjs').Website>} websites Array of website objects
+ * @returns {string} HTML string containing formatted profile information
  */
 function profileInfoTemplate(name, contact, bio, websites) {
   // I want bio paragraphs to be separated by a line break.
@@ -23,14 +24,21 @@ function profileInfoTemplate(name, contact, bio, websites) {
 }
 
 /**
- * Loads the profile info into the profile-info div.
+ * Loads the profile information into the DOM.  
+ * Populates the profile-info section with user data from profile.mjs
  */
 function loadProfile() {
-  document.getElementById('profile-info').innerHTML = profileInfoTemplate(profile.name, profile.contact, profile.bio, profile.websites);
+  document.getElementById('profile-info').innerHTML = profileInfoTemplate(
+    profile.name, 
+    profile.contact, 
+    profile.bio, 
+    profile.websites
+  );
 }
 
 /**
- * Loads the about text into the about-text div.
+ * Loads the about text into the DOM  
+ * Converts newlines to semantic paragraphs and populates the about section
  */
 function loadAbout() {
   // I want about paragraphs to be separated into semantic paragraphs.

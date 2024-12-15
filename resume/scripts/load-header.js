@@ -1,3 +1,7 @@
+/**
+ * Generates the HTML template for the header
+ * @returns {string} HTML string containing the logo and navigation menu
+ */
 function headerTemplate() {
   return `
     <img src="/resume/assets/simple-NB-logo.png" alt="NB Logo" class="logo">
@@ -10,6 +14,9 @@ function headerTemplate() {
   `;
 }
 
+/**
+ * Loads the header template into the header element
+ */
 function loadHeader() {
   const header = headerTemplate();
   document.querySelector('header').innerHTML = header;

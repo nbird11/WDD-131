@@ -1,9 +1,9 @@
 import profile from '../scripts/profile.mjs';
 
 /**
- * Creates the HTML for a single education item
- * @param {import('../scripts/profile.mjs').Education} education
- * @returns {string} HTML string for the education item
+ * Generates HTML template for a single education item
+ * @param {import('../scripts/profile.mjs').Education} education The education object containing all education details
+ * @returns {string} HTML string representing the education card
  */
 function educationTemplate(education) {
   const logoSrc = education.logo || '../assets/simple-NB-logo.png';
@@ -31,7 +31,8 @@ function educationTemplate(education) {
 }
 
 /**
- * Loads all education items into the education-list div
+ * Loads all education items into the DOM.  
+ * Renders education cards using data from profile.mjs
  */
 function loadEducation() {
   const educationHTML = profile.education.map(edu => educationTemplate(edu)).join('');

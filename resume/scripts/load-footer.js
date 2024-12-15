@@ -1,3 +1,7 @@
+/**
+ * Generates the HTML template for the footer
+ * @returns {string} HTML string containing footer content and modal templates
+ */
 function footerTemplate() {
   return `
     <div>
@@ -53,6 +57,10 @@ function footerTemplate() {
   `;
 }
 
+/**
+ * Sets up event listeners for modal functionality
+ * Handles opening and closing of modals through various user interactions
+ */
 function setupModals() {
   // Open modals
   document.getElementById('about-link').addEventListener('click', (e) => {
@@ -90,6 +98,9 @@ function setupModals() {
   });
 }
 
+/**
+ * Initializes the footer by loading the template and setting up modal functionality
+ */
 function loadFooter() {
   const footer = footerTemplate();
   document.querySelector('footer').innerHTML = footer;
