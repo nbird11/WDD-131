@@ -185,7 +185,7 @@ const projects = [
   {
     title: "Directory Tree Scanner",
     description: "A cli tool that scans a directory and prints out the directory tree. Similar to the 'tree' command in Unix/Linux. Added colors to distinguish depth since the demo.",
-    technologies: ["TypeScript", "CLI"],
+    technologies: ["TypeScript", "CLI", "Node.js"],
     categories: ["cli"],
     image: "assets/tree.png",
     demo: "https://www.youtube.com/watch?v=RPz6n9gmK1c",
