@@ -144,8 +144,8 @@ const projects = [
     technologies: ["Python", "Google Firebase"],
     categories: ["cli", "cloud", "database"],
     image: "assets/cloud-database.jpg",
-    github: "https://github.com/nbird11/TaskTracker",
     demo: "https://www.youtube.com/watch?v=5ToeDJayhyM",
+    github: "https://github.com/nbird11/TaskTracker",
     featured: false,
     date: "Late 2023"
   },
