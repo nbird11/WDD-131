@@ -122,7 +122,7 @@ const projects = [
     technologies: ["C++", "unit testing", "OOP"],
     categories: ["desktop"],
     image: "assets/howitzer.png",
-    demo: "https://www.youtube.com/watch?v=gQPv6X5eD1E",
+    demo: "https://www.youtube.com/watch?v=HwkHCsVkrf8&t=2s",
     github: null,
     featured: false,
     date: "Early 2024"
@@ -133,7 +133,7 @@ const projects = [
     technologies: ["C++", "unit testing", "OOP"],
     categories: ["desktop"],
     image: "assets/lunar-module.png",
-    demo: "https://www.youtube.com/watch?v=gQPv6X5eD1E",
+    demo: "https://www.youtube.com/watch?v=0PfekaaeC-M",
     github: null,
     featured: false,
     date: "Early 2024"
